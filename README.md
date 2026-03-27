@@ -70,15 +70,14 @@ This project uses the following Kubernetes objects:
 
 ```text
 micro-service-voting-app/
-├── namespace.yaml
-├── vote-deployment.yaml
+├── vote-deploy.yaml
 ├── vote-service.yaml
-├── redis-deployment.yaml
+├── redis-deploy.yaml
 ├── redis-service.yaml
-├── worker-deployment.yaml
-├── postgres-deployment.yaml
+├── worker-deploy.yaml
+├── postgres-deploy.yaml
 ├── postgres-service.yaml
-├── result-deployment.yaml
+├── result-deploy.yaml
 ├── result-service.yaml
 └── README.md
 ```
@@ -90,40 +89,40 @@ micro-service-voting-app/
 ### 1. Create Namespace
 
 ```bash
-kubectl apply -f namespace.yaml
+kubectl create -n vote
 ```
 
 ### 2. Deploy Redis
 
 ```bash
-kubectl apply -f redis-deployment.yaml
+kubectl apply -f redis-deploy.yaml
 kubectl apply -f redis-service.yaml
 ```
 
 ### 3. Deploy PostgreSQL
 
 ```bash
-kubectl apply -f postgres-deployment.yaml
+kubectl apply -f postgres-deploy.yaml
 kubectl apply -f postgres-service.yaml
 ```
 
 ### 4. Deploy Vote App
 
 ```bash
-kubectl apply -f vote-deployment.yaml
+kubectl apply -f vote-deploy.yaml
 kubectl apply -f vote-service.yaml
 ```
 
 ### 5. Deploy Worker
 
 ```bash
-kubectl apply -f worker-deployment.yaml
+kubectl apply -f worker-deploy.yaml
 ```
 
 ### 6. Deploy Result App
 
 ```bash
-kubectl apply -f result-deployment.yaml
+kubectl apply -f result-deploy.yaml
 kubectl apply -f result-service.yaml
 ```
 
@@ -182,9 +181,4 @@ This project is useful for beginners who want to understand:
 - The Docker images used are from **KodeKloud / DockerSamples** for Kubernetes hands-on learning.
 - The deployment focuses on understanding Kubernetes concepts rather than building a custom production application.
 
----
-
-## Author
-
-**Prathap G**  
-DevOps Learner | CSE Student
+--
