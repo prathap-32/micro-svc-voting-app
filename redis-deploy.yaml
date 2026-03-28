@@ -4,16 +4,16 @@ metadata:
   namespace: vote
   name: redis
   labels:
-    app: redis-app
+    tier: redis-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: redis
+      tier: redis-app
   template:
     metadata:
       labels:
-        app: redis
+        tier: redis-app
     spec:
       containers:
       - name: redis

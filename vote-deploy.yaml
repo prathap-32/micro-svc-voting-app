@@ -4,17 +4,17 @@ metadata:
   namespace: vote
   name: vote
   labels:
-    name: vote-app
+    tier: vote-app
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: vote
+      tier: vote-app
   template:
     metadata:
       name: vote-app
       labels:
-        app: vote
+        tier: vote-app
     spec:
       containers:
       - name: vote-app
