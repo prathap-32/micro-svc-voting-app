@@ -70,6 +70,7 @@ This project uses the following Kubernetes objects:
 
 ```text
 micro-service-voting-app/
+├── images/
 ├── vote-deploy.yaml
 ├── vote-service.yaml
 ├── redis-deploy.yaml
@@ -80,6 +81,7 @@ micro-service-voting-app/
 ├── result-deploy.yaml
 ├── result-service.yaml
 └── README.md
+
 ```
 
 ---
