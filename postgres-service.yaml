@@ -5,7 +5,7 @@ metadata:
   name: db
 spec:
   selector:
-    app: db-app
+    tier: db-app
   type: ClusterIP
   ports:
    - port: 5432

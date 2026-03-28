@@ -5,7 +5,7 @@ metadata:
   name: vote
 spec:
   selector:
-    name: vote-app
+    tier: vote-app
   type: NodePort
   ports:
    - port: 8080

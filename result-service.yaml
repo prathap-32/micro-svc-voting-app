@@ -5,7 +5,7 @@ metadata:
   name: result
 spec:
   selector:
-    name: result-app
+    app: result
   type: NodePort
   ports:
    - port: 8081

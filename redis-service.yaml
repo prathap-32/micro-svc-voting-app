@@ -5,7 +5,7 @@ metadata:
   name: redis
 spec:
   selector:
-    app: redis-app
+    tier: redis-app
   type: ClusterIP
   ports:
    - port: 6379
